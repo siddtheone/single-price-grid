@@ -82,6 +82,7 @@ export const FormattedP = styled.p`
 `;
 
 export const SingUp = styled.button`
+    --blurRadius: 5px;
     background: var(--yellow);
     width: 100%;
     display: block;
@@ -91,6 +92,16 @@ export const SingUp = styled.button`
     border-radius: 5px;
     margin-top: 1.6em;
     font-size: 1rem;
+    transition: 0.5s;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 5px 5px var(--blurRadius) rgba(0, 0, 0, 0.5),           -5px 5px var(--blurRadius) rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        --blurRadius: 10px;
+        transform: translateY(-5px);
+        box-shadow: 5px 5px var(--blurRadius) rgba(0, 0, 0, 0.3),           -5px 5px var(--blurRadius) rgba(0, 0, 0, 0.3);
+    }
 `;
 
 export const WhyUs = styled(PaddedContainer)`
